@@ -1,10 +1,8 @@
-/**
- * main.js - Lógica interactiva para la web de José Ignacio Pino Diaz
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // -------------------------------------------------------------
-  // 1. Inicialización de EmailJS 
+  // Inicialización de EmailJS 
   // -------------------------------------------------------------
   const EMAILJS_PUBLIC_KEY = "mBUxp58ezVo3wj1El";
   const EMAILJS_SERVICE_ID = "service_yys7z3v";
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // -------------------------------------------------------------
-  // 2. Control del Menú Desplegable Móvil con Animación Suave
+  // Control del Menú Desplegable Móvil 
   // -------------------------------------------------------------
   const mobileBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -43,14 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mobileBtn && mobileMenu) {
     mobileBtn.addEventListener("click", toggleMobileMenu);
 
-    // Cerrar menú al hacer clic en cualquier enlace
+   
     mobileLinks.forEach((link) => {
       link.addEventListener("click", closeMobileMenu);
     });
   }
 
   // -------------------------------------------------------------
-  // 3. Envío del Formulario de Contacto vía EmailJS
+  // Envío del Formulario de Contacto 
   // -------------------------------------------------------------
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
@@ -62,23 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!submitBtn) return;
 
-      // Deshabilitar botón durante el proceso de envío
+     
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span>Enviando...</span> <i class="fa-solid fa-circle-notch fa-spin text-xs"></i>`;
 
-      // Enviar formulario utilizando EmailJS
+      
       emailjs
         .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
         .then(() => {
-          // Restaurar estado del botón y limpiar el formulario
+          
           submitBtn.disabled = false;
           submitBtn.innerHTML = `<span>Solicitar Cita / Enviar Consulta</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
           contactForm.reset();
 
-          // Ocultar mensaje de error anterior si existía
+          
           if (formStatus) formStatus.classList.add("hidden");
 
-          // Desplegar Modal de Éxito
+          // Desplegar Modal 
           openSuccessModal();
         })
         .catch((error) => {
@@ -99,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// -------------------------------------------------------------
-// 4. Funciones de Modales (Globales)
-// -------------------------------------------------------------
+// ---------------------------
+// Funciones de Modales 
+// ---------------------------
 
 // Control del Modal de Éxito al enviar formulario
 function openSuccessModal() {
