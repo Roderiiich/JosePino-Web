@@ -1,5 +1,5 @@
 /**
- * main.js - Lógica interactiva para la web de José Ignacio Pino D.
+ * main.js - Lógica interactiva para la web de José Ignacio Pino Diaz
  */
 
 document.addEventListener("DOMContentLoaded", () => {
