@@ -5,9 +5,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // -------------------------------------------------------------
-    // 1. Inicialización de EmailJS
+    // 1. Inicialización de EmailJS con tus credenciales
     // -------------------------------------------------------------
-    // TODO: Reemplaza "TU_PUBLIC_KEY" con la clave pública de EmailJS de tu cliente
     const EMAILJS_PUBLIC_KEY = "mBUxp58ezVo3wj1El";
     const EMAILJS_SERVICE_ID = "service_h3na3kl";
     const EMAILJS_TEMPLATE_ID = "template_aka2ehi";
@@ -55,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>Enviando...</span> <i class="fa-solid fa-circle-notch fa-spin text-xs"></i>`;
 
-            // Enviar formulario utilizando EmailJS
-            emailjs.sendForm(service_h3na3kl, template_aka2ehi, this)
+            // Enviar formulario utilizando las variables correctas
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
                 .then(() => {
                     submitBtn.disabled = false;
-                    submitBtn.innerHTML = `<span>Enviar Mensaje</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
+                    submitBtn.innerHTML = `<span>Solicitar Cita / Enviar Consulta</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
                     
                     formStatus.className = "text-center p-4 mt-4 rounded-lg text-sm bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
                     formStatus.innerText = "¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.";
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch((error) => {
                     console.error("Error EmailJS:", error);
                     submitBtn.disabled = false;
-                    submitBtn.innerHTML = `<span>Enviar Mensaje</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
+                    submitBtn.innerHTML = `<span>Solicitar Cita / Enviar Consulta</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
                     
                     formStatus.className = "text-center p-4 mt-4 rounded-lg text-sm bg-red-500/10 text-red-400 border border-red-500/20";
                     formStatus.innerText = "Hubo un problema al enviar el mensaje. Inténtalo nuevamente o escríbenos a WhatsApp.";
