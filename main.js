@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // -------------------------------------------------------------
-  // 1. Inicialización de EmailJS con tus credenciales
+  // 1. Inicialización de EmailJS 
   // -------------------------------------------------------------
   const EMAILJS_PUBLIC_KEY = "mBUxp58ezVo3wj1El";
   const EMAILJS_SERVICE_ID = "service_yys7z3v";
@@ -17,22 +17,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // -------------------------------------------------------------
-  // 2. Control del Menú Desplegable Móvil
+  // 2. Control del Menú Desplegable Móvil con Animación Suave
   // -------------------------------------------------------------
   const mobileBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-link");
 
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove("max-h-96", "opacity-100");
+    mobileMenu.classList.add("max-h-0", "opacity-0");
+  }
+
+  function toggleMobileMenu() {
+    if (!mobileMenu) return;
+    const isOpen = mobileMenu.classList.contains("max-h-96");
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      mobileMenu.classList.remove("max-h-0", "opacity-0");
+      mobileMenu.classList.add("max-h-96", "opacity-100");
+    }
+  }
+
   if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+    mobileBtn.addEventListener("click", toggleMobileMenu);
 
     // Cerrar menú al hacer clic en cualquier enlace
     mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
+      link.addEventListener("click", closeMobileMenu);
     });
   }
 
@@ -139,3 +152,5 @@ function closeModal() {
     modal.classList.add("hidden");
   }
 }
+
+
