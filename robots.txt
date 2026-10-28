@@ -1,0 +1,6 @@
+# robots.txt para José Ignacio Pino D. - Servicios Jurídicos
+User-agent: *
+Allow: /
+
+# Sitemap (reemplaza tudominio.cl cuando lo tengas)
+Sitemap: https://tudominio.cl/sitemap.xml

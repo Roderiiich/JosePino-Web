@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Ignacio Pino D. | Asesoría & Representación Jurídica</title>
+    
+    <!-- Meta etiquetas SEO -->
+    <meta name="description" content="Estrategia jurídica, compromiso real y defensa de tus derechos en Derecho de Familia, Civil y Penal. Asesoría jurídica integral por José Ignacio Pino D.">
+    <meta name="author" content="José Ignacio Pino D.">
+
+    <!-- Tailwind CSS Framework CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B132B',
+                            900: '#080C16',
+                            950: '#04060B',
+                        },
+                        gold: {
+                            400: '#F3E5AB',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Hoja de Estilos CSS Personalizada -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-navy-900 text-gray-300 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-40 bg-navy-950/80 backdrop-blur-md border-b border-gold-500/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 border border-gold-500/40 rounded flex items-center justify-center text-gold-500 group-hover:border-gold-500 transition-colors">
+                        <i class="fa-solid fa-scale-balanced text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif-title text-xl font-bold tracking-wider text-white">JOSÉ IGNACIO PINO D.</span>
+                        <span class="text-[10px] tracking-widest text-gold-500 uppercase font-semibold">Servicios & Asesoría Jurídica</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#perfil" class="text-sm tracking-wide text-gray-300 hover:text-gold-500 transition-colors">Sobre Mí</a>
+                    <a href="#especialidades" class="text-sm tracking-wide text-gray-300 hover:text-gold-500 transition-colors">Especialidades</a>
+                    <a href="#compromiso" class="text-sm tracking-wide text-gray-300 hover:text-gold-500 transition-colors">Nuestro Compromiso</a>
+                    <a href="#contacto" class="text-sm tracking-wide text-gray-300 hover:text-gold-500 transition-colors">Contacto</a>
+                    <a href="#contacto" class="px-5 py-2.5 rounded text-xs tracking-wider uppercase font-semibold text-navy-950 bg-gold-500 hover:bg-gold-400 transition-all transform hover:-translate-y-0.5 shadow-lg shadow-gold-500/10">
+                        Consulta Urgente
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-gold-500 focus:outline-none" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950/95 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-4">
+            <a href="#perfil" class="mobile-link block py-2 text-base font-medium text-gray-300 hover:text-gold-500">Sobre Mí</a>
+            <a href="#especialidades" class="mobile-link block py-2 text-base font-medium text-gray-300 hover:text-gold-500">Especialidades</a>
+            <a href="#compromiso" class="mobile-link block py-2 text-base font-medium text-gray-300 hover:text-gold-500">Nuestro Compromiso</a>
+            <a href="#contacto" class="mobile-link block py-2 text-base font-medium text-gray-300 hover:text-gold-500">Contacto</a>
+            <a href="#contacto" class="mobile-link inline-block w-full text-center py-3 rounded text-sm tracking-wider uppercase font-semibold text-navy-950 bg-gold-500">
+                Consulta Urgente
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 hero-bg overflow-hidden border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500 text-xs tracking-wider uppercase font-semibold">
+                        <i class="fa-solid fa-shield-halved text-xs"></i>
+                        <span>Estrategia Jurídica • Compromiso Real • Defensa de tus Derechos</span>
+                    </div>
+                    
+                    <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Rigor Jurídico, <br>
+                        <span class="gold-gradient-text italic font-normal">Compromiso Absoluto</span> <br>
+                        con tus Derechos e Intereses.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Asesoría, representación y acompañamiento jurídico integral. Abordamos cada asunto con rigor profesional para definir estrategias jurídicas adecuadas a las particularidades de tu caso.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded text-sm font-semibold text-navy-950 bg-gold-500 hover:bg-gold-400 transition-all shadow-xl shadow-gold-500/15 flex items-center justify-center space-x-2">
+                            <span>Reservar Consulta Privada</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/56983292040?text=Hola%20Jos%C3%A9%20Ignacio,%20quisiera%20realizar%20una%20consulta%20jur%C3%ADdica." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded text-sm font-semibold text-white border border-gray-700 hover:border-gold-500/50 hover:bg-navy-800 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            <span>Línea Directa / WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gray-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-serif-title text-2xl sm:text-3xl font-bold text-white">UCSC</p>
+                            <p class="text-xs text-gray-400 tracking-wider">Egresado en Derecho</p>
+                        </div>
+                        <div>
+                            <p class="font-serif-title text-2xl sm:text-3xl font-bold text-white">100%</p>
+                            <p class="text-xs text-gray-400 tracking-wider">Dedicación & Rigor</p>
+                        </div>
+                        <div>
+                            <p class="font-serif-title text-2xl sm:text-3xl font-bold text-white">100%</p>
+                            <p class="text-xs text-gray-400 tracking-wider">Confidencialidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Retrato Profesional -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-b from-gold-500/30 to-transparent blur-sm"></div>
+                        <div class="relative rounded-2xl bg-navy-800 border border-gold-500/20 overflow-hidden shadow-2xl">
+                            <img src="img/foto.png" alt="José Ignacio Pino D." class="w-full h-[480px] object-cover object-top filter grayscale contrast-105 hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-navy-950 via-navy-950/80 to-transparent">
+                                <p class="font-serif-title text-xl font-bold text-white">José Ignacio Pino D.</p>
+                                <p class="text-xs text-gold-500">Egresado en Derecho UCSC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="perfil" class="py-24 bg-navy-950 border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="p-8 rounded-2xl bg-navy-900 border border-gold-500/20 space-y-6">
+                        <h3 class="font-serif-title text-2xl font-bold text-white">Credenciales & Formación</h3>
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-graduation-cap text-gold-500 mt-1"></i>
+                                <span>Egresado de la Licenciatura en Derecho (UCSC)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-scale-balanced text-gold-500 mt-1"></i>
+                                <span>Especialización en Derecho de Familia, Civil y Penal</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-handshake-angle text-gold-500 mt-1"></i>
+                                <span>Atención personalizada, cercana y sensible</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-shield text-gold-500 mt-1"></i>
+                                <span>Compromiso ético y resguardo confidencial</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs text-gold-500 tracking-widest uppercase font-semibold">Perfil Profesional</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-white">Atención Personalizada y Directa. Sin Intermediarios.</h2>
+                    <p class="text-gray-400 leading-relaxed font-light">
+                        Desde la evaluación inicial de cada caso hasta su tramitación y resolución, trabajamos con responsabilidad, dedicación y una comunicación cercana, procurando entregar soluciones jurídicas claras, eficaces y ajustadas a las necesidades de cada cliente.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed font-light">
+                        Entendemos que detrás de cada asunto existen personas, vínculos e intereses que merecen especial atención. Por ello, trabajamos con compromiso, confidencialidad y sensibilidad, sin perder de vista la rigurosidad jurídica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="especialidades" class="py-24 bg-navy-900 border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs text-gold-500 tracking-widest uppercase font-semibold">Áreas de Práctica</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-white">Soluciones Legales de Alta Especialización</h2>
+                <p class="text-gray-400 font-light">Representación rigurosa enfocada en la protección integral de tus derechos e intereses.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-xl bg-navy-950 border border-gold-500/15 hover-gold-transition group">
+                    <div class="w-14 h-14 rounded bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                        <i class="fa-solid fa-people-roof text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif-title text-2xl font-bold text-white mb-3">Derecho de Familia</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
+                        Divorcio, alimentos, cumplimiento de deudas alimenticias, cuidado personal y relación directa y regular de NNA.
+                    </p>
+                    <button onclick="openModal('familia')" class="text-xs uppercase font-semibold text-gold-500 hover:text-gold-400 flex items-center space-x-2">
+                        <span>Ver detalles</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-xl bg-navy-950 border border-gold-500/15 hover-gold-transition group">
+                    <div class="w-14 h-14 rounded bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                        <i class="fa-solid fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif-title text-2xl font-bold text-white mb-3">Derecho Civil</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
+                        Estudio y redacción de contratos, escrituras, responsabilidades, controversias patrimoniales y recursos de protección.
+                    </p>
+                    <button onclick="openModal('civil')" class="text-xs uppercase font-semibold text-gold-500 hover:text-gold-400 flex items-center space-x-2">
+                        <span>Ver detalles</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-xl bg-navy-950 border border-gold-500/15 hover-gold-transition group">
+                    <div class="w-14 h-14 rounded bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                        <i class="fa-solid fa-gavel text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif-title text-2xl font-bold text-white mb-3">Derecho Penal</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light">
+                        Defensa estratégica para imputados, víctimas y querellantes en delitos contra la propiedad, personas y garantías del debido proceso.
+                    </p>
+                    <button onclick="openModal('penal')" class="text-xs uppercase font-semibold text-gold-500 hover:text-gold-400 flex items-center space-x-2">
+                        <span>Ver detalles</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Compromiso -->
+    <section id="compromiso" class="py-24 bg-navy-950 border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs text-gold-500 tracking-widest uppercase font-semibold">Valores y Metodología</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-white">Nuestro Compromiso</h2>
+                <p class="text-gray-400 font-light">Creemos que una representación jurídica efectiva comienza por comprender a las personas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-xl bg-navy-900 border border-gold-500/10 space-y-4">
+                    <span class="text-xs text-gold-500 font-semibold uppercase tracking-wider">Acompañamiento Constante</span>
+                    <h3 class="font-serif-title text-xl font-bold text-white">Acompañamiento e Información Transparente</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">
+                        Acompañamos a nuestros clientes durante las distintas etapas del proceso, manteniéndolos informados sobre las gestiones realizadas, las alternativas disponibles y el desarrollo de su procedimiento.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-navy-900 border border-gold-500/10 space-y-4">
+                    <span class="text-xs text-gold-500 font-semibold uppercase tracking-wider">Defensa Responsable</span>
+                    <h3 class="font-serif-title text-xl font-bold text-white">Soluciones Jurídicamente Viables</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed font-light">
+                        Asumimos cada caso con responsabilidad, dedicación y determinación, procurando una defensa sólida para alcanzar soluciones jurídicamente viables con una actuación justa y transparente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto / Cita -->
+    <section id="contacto" class="py-24 bg-navy-900 border-b border-gold-500/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy-950 border border-gold-500/20 rounded-2xl p-8 sm:p-12 shadow-2xl space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="text-xs text-gold-500 tracking-widest uppercase font-semibold">Reserva de Atención</span>
+                    <h2 class="font-serif-title text-3xl font-bold text-white">Cuéntanos tu Caso</h2>
+                    <p class="text-sm text-gray-400 font-light">Estamos aquí para escucharte, representarte y acompañarte.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Nombre Completo *</label>
+                            <input type="text" name="user_name" required class="w-full bg-navy-900 border border-gray-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Ej. Roberto Gómez">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Teléfono de Contacto *</label>
+                            <input type="tel" name="user_phone" required class="w-full bg-navy-900 border border-gray-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="+56 9 8329 2040">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Correo Electrónico *</label>
+                            <input type="email" name="user_email" required class="w-full bg-navy-900 border border-gray-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="jpino@derecho.ucsc.cl">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Materia de Interés *</label>
+                            <select name="subject_area" required class="w-full bg-navy-900 border border-gray-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                <option value="">Selecciona materia</option>
+                                <option value="Derecho de Familia">Derecho de Familia</option>
+                                <option value="Derecho Civil">Derecho Civil</option>
+                                <option value="Derecho Penal">Derecho Penal</option>
+                                <option value="Otra Consulta">Otra Consulta</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Resumen Breve de la Consulta *</label>
+                        <textarea name="message" rows="4" required class="w-full bg-navy-900 border border-gray-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Describa brevemente la situación jurídica para evaluar su caso..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full py-4 rounded text-sm font-semibold text-navy-950 bg-gold-500 hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/10 uppercase tracking-wider flex justify-center items-center space-x-2">
+                        <span>Solicitar Cita / Enviar Consulta</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+
+                <div id="form-status" class="hidden text-center p-4 mt-4 rounded-lg text-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datos de Contacto Directos -->
+    <section class="py-16 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="flex items-center space-x-4 justify-center md:justify-start">
+                    <div class="w-12 h-12 rounded bg-navy-900 border border-gold-500/20 flex items-center justify-center text-gold-500 shrink-0">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Atención Profesional</p>
+                        <p class="text-sm text-white mt-1">José Ignacio Pino D.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4 justify-center md:justify-start">
+                    <div class="w-12 h-12 rounded bg-navy-900 border border-gold-500/20 flex items-center justify-center text-gold-500 shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Correo Electrónico</p>
+                        <a href="mailto:jpino@derecho.ucsc.cl" class="text-sm text-white hover:text-gold-500 mt-1 block">jpino@derecho.ucsc.cl</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4 justify-center md:justify-start">
+                    <div class="w-12 h-12 rounded bg-navy-900 border border-gold-500/20 flex items-center justify-center text-gold-500 shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase font-semibold">Teléfono / WhatsApp</p>
+                        <a href="tel:+56983292040" class="text-sm text-white hover:text-gold-500 mt-1 block">+56 9 8329 2040</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-navy-950 border-t border-gray-900 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 José Ignacio Pino D. Todos los derechos reservados. Egresado en Derecho UCSC.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56983292040?text=Hola%20Jos%C3%A9%20Ignacio,%20quisiera%20realizar%20una%20consulta%20jur%C3%ADdica." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110" aria-label="Contacto WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Modal Informativo -->
+    <div id="info-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 sm:p-8 max-w-lg w-full space-y-4 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 id="modal-title" class="font-serif-title text-2xl font-bold text-white"></h3>
+            <p id="modal-body" class="text-sm text-gray-300 leading-relaxed font-light"></p>
+            <div class="pt-4">
+                <a href="#contacto" onclick="closeModal()" class="inline-block px-6 py-3 rounded text-xs font-semibold text-navy-950 bg-gold-500 uppercase tracking-wider">Solicitar Asesoría</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Externos -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

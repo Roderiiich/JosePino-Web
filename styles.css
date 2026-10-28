@@ -1,0 +1,55 @@
+/* Importación de Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Variables Globales de Color y Tipografía */
+:root {
+  --color-navy-950: #04060B;
+  --color-navy-900: #080C16;
+  --color-navy-800: #0B132B;
+  --color-gold-500: #D4AF37;
+  --color-gold-400: #F3E5AB;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base y Reset */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-navy-900);
+  color: #D1D5DB;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Efectos de Texto y Fondos Especiales */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF099 0%, #D4AF37 50%, #997500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-bg {
+  background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(8, 12, 22, 1) 70%);
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+/* Transiciones Suaves */
+.hover-gold-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-gold-transition:hover {
+  border-color: var(--color-gold-500);
+  transform: translateY(-2px);
+}
