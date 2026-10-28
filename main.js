@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Inicialización de EmailJS con tus credenciales
     // -------------------------------------------------------------
     const EMAILJS_PUBLIC_KEY = "mBUxp58ezVo3wj1El";
-    const EMAILJS_SERVICE_ID = "service_h3na3kl";
+    const EMAILJS_SERVICE_ID = "service_yys7z3v";
     const EMAILJS_TEMPLATE_ID = "template_aka2ehi";
 
     if (typeof emailjs !== 'undefined') {
@@ -48,32 +48,37 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            if (!submitBtn || !formStatus) return;
+            if (!submitBtn) return;
 
-            // Deshabilitar botón durante el proceso
+            // Deshabilitar botón durante el proceso de envío
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>Enviando...</span> <i class="fa-solid fa-circle-notch fa-spin text-xs"></i>`;
 
-            // Enviar formulario utilizando las variables correctas
+            // Enviar formulario utilizando EmailJS
             emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
                 .then(() => {
+                    // Restaurar estado del botón y limpiar el formulario
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = `<span>Solicitar Cita / Enviar Consulta</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
-                    
-                    formStatus.className = "text-center p-4 mt-4 rounded-lg text-sm bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
-                    formStatus.innerText = "¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.";
-                    formStatus.classList.remove('hidden');
-                    
                     contactForm.reset();
+                    
+                    // Ocultar mensaje de error anterior si existía
+                    if (formStatus) formStatus.classList.add('hidden');
+
+                    // Desplegar Modal de Éxito
+                    openSuccessModal();
                 })
                 .catch((error) => {
                     console.error("Error EmailJS:", error);
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = `<span>Solicitar Cita / Enviar Consulta</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
                     
-                    formStatus.className = "text-center p-4 mt-4 rounded-lg text-sm bg-red-500/10 text-red-400 border border-red-500/20";
-                    formStatus.innerText = "Hubo un problema al enviar el mensaje. Inténtalo nuevamente o escríbenos a WhatsApp.";
-                    formStatus.classList.remove('hidden');
+                    // En caso de falla, mostrar aviso de error debajo del formulario
+                    if (formStatus) {
+                        formStatus.className = "text-center p-4 mt-4 rounded-lg text-sm bg-red-500/10 text-red-400 border border-red-500/20";
+                        formStatus.innerText = "Hubo un problema al enviar el mensaje. Inténtalo nuevamente o escríbenos a WhatsApp.";
+                        formStatus.classList.remove('hidden');
+                    }
                 });
         });
     }
@@ -81,8 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // -------------------------------------------------------------
-// 4. Modales Informativos de Áreas de Práctica (Globales)
+// 4. Funciones de Modales (Globales)
 // -------------------------------------------------------------
+
+// Control del Modal de Éxito al enviar formulario
+function openSuccessModal() {
+    const modal = document.getElementById('success-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    }
+}
+
+function closeSuccessModal() {
+    const modal = document.getElementById('success-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+// Control de Modales Informativos de Áreas de Práctica
 const modalData = {
     familia: {
         title: 'Derecho de Familia',
